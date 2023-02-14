@@ -108,7 +108,6 @@ a {
 .logo-img:hover {
   transition: 300ms ease-in-out;
   cursor: pointer;
-  height: 5.1em;
 }
 
 .list {
@@ -383,6 +382,15 @@ footer > div:nth-child(1) {
 .icon-whatsapp {
   font-size: 2.85em;
   fill: green;
+}
+
+.error-page {
+  height: 67vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
 }
 
 @keyframes pulse {
