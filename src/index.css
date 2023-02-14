@@ -23,6 +23,7 @@ body {
 
 main {
   position: relative;
+  overflow: hidden;
 }
 
 .loading-comp {
@@ -107,7 +108,6 @@ a {
 .logo-img:hover {
   transition: 300ms ease-in-out;
   cursor: pointer;
-  filter: blur(0.5px);
   height: 5.1em;
 }
 
@@ -126,7 +126,6 @@ a {
 .btn:hover {
   cursor: pointer;
   transition: 200ms ease-in-out;
-  filter: blur(0.6px);
   transition: 300ms ease-in-out;
   text-decoration: underline 2px;
   text-underline-offset: 0.3em;
@@ -134,7 +133,6 @@ a {
 }
 
 .mob-slide {
-  /* position: relative; */
   padding: 0;
 }
 
@@ -147,15 +145,37 @@ a {
   width: 60%;
   padding: 1em 2em;
   top: 0%;
-  right: 0%;
+  right: -100%;
   text-transform: capitalize;
   font-weight: 500;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 300ms ease-in-out;
 }
 
 .mob-slide > .ul-list > .btn {
   margin: 0.65em 0;
   font-size: 1.1em;
+}
+
+.mob-slide > .ul-list-active > .btn {
+  margin: 0.65em 0;
+  font-size: 1.1em;
+}
+
+.mob-slide > .ul-list-active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  height: 100vh;
+  width: 60%;
+  padding: 1em 2em;
+  top: 0%;
+  right: 0%;
+  text-transform: capitalize;
+  font-weight: 500;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 300ms ease-in-out;
 }
 
 .close-cont {
@@ -281,25 +301,46 @@ article > .content {
 }
 
 footer {
+  width: 100%;
   padding: 1em 0;
   text-align: center;
-  color: white;
-  background-color: var(--Brown);
   font-size: 0.85em;
+  color: var(--Brown);
+  font-weight: 500;
+}
+
+footer > div:nth-child(1) {
+  border-bottom: 1px solid gray;
+  padding: 0.8em 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .abid-link {
-  margin: 0.5em 0;
+  padding: 0.8em 0;
 }
 
 .abid-link > a {
-  margin: 0 0.4em;
-  color: var(--Red);
+  color: var(--Brown);
+  padding: 0 0 0 0.45em;
+  transition: 300ms ease-in-out;
 }
 
 .abid-link > a:hover {
+  cursor: pointer;
+  color: var(--Red);
+  font-weight: 600;
+}
+
+.msj {
+  font-weight: 600;
+  color: var(--Red);
   transition: 300ms ease-in-out;
-  color: white;
+}
+
+.msj:hover {
+  cursor: pointer;
+  color: var(--Brown);
 }
 
 .green {
@@ -469,6 +510,38 @@ footer {
   .featured {
     flex-direction: row;
   }
+
+  footer {
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.05em;
+    color: var(--Brown);
+    font-weight: 500;
+  }
+
+  footer > div:nth-child(1) {
+    border-bottom: 1px solid gray;
+    padding: 0.8em 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .abid-link {
+    padding: 0.8em 0;
+  }
+
+  .abid-link > a {
+    color: var(--Brown);
+    padding: 0 0 0 0.45em;
+    transition: 300ms ease-in-out;
+  }
+
+  .abid-link > a:hover {
+    cursor: pointer;
+    color: var(--Red);
+    font-weight: 600;
+  }
 }
 
 @media screen and (min-width: 1366px) {
@@ -476,6 +549,6 @@ footer {
 
 @media screen and (min-width: 120em) {
   body {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }

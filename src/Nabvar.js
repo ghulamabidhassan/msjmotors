@@ -42,32 +42,30 @@ const Navbar = () => {
               }}
             />
           </span>
-          {open && (
-            <article className="mob-slide">
-              <ul className="ul-list">
-                <div className="close-cont">
-                  <FaRegWindowClose
-                    onClick={() => {
-                      setOpen(!open);
-                    }}
-                    className="close"
-                  />
-                </div>
-                <Link to="/" className="btn">
-                  home
-                </Link>
-                <Link to="vehicle" className="btn">
-                  vehicles
-                </Link>
-                <Link to="about" className="btn">
-                  About Us
-                </Link>
-                <Link to="contact" className="btn">
-                  contact
-                </Link>
-              </ul>
-            </article>
-          )}
+          <article className="mob-slide">
+            <ul className={open ? "ul-list-active" : "ul-list"}>
+              <div className="close-cont">
+                <FaRegWindowClose
+                  onClick={() => {
+                    setOpen(!open);
+                  }}
+                  className="close"
+                />
+              </div>
+              <Link to="/" className="btn">
+                home
+              </Link>
+              <Link to="vehicle" className="btn">
+                vehicles
+              </Link>
+              <Link to="about" className="btn">
+                About Us
+              </Link>
+              <Link to="contact" className="btn">
+                contact
+              </Link>
+            </ul>
+          </article>
         </div>
       </nav>
     </>
