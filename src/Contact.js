@@ -10,7 +10,7 @@ const Contact = () => {
         <br />
         <br />
         <span className="icon">
-          <FaPhoneAlt className="fa-icon" /> +91 988 435 5517, +91 812 480 0081
+          <FaPhoneAlt className="fa-icon" /> +91 812 480 0081
         </span>
         <br />
         <span className="icon">
