@@ -4,7 +4,7 @@ const Info = () => {
   return (
     <div className="info-section">
       <span className="icon">
-        <FaPhoneAlt className="fa-icon" /> +91 988 435 5517, +91 900 316 ****
+        <FaPhoneAlt className="fa-icon" /> +91 988 435 5517, +91 812 480 0081
       </span>
       <span className="icon">
         <FaEnvelope className="fa-icon" />{" "}
