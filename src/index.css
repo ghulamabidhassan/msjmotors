@@ -432,6 +432,36 @@ footer > div:nth-child(1) {
   margin: 0em 0 1em 0;
 }
 
+.contact {
+  margin: 1em;
+  padding: 2em 0em;
+  text-align: center;
+}
+
+.first-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+:is(.insta, .facebook, .twitter) {
+  font-size: 1.2em;
+  transition: 200ms ease-in-out;
+  margin: 0 0.3em;
+}
+
+:is(.insta, .facebook, .twitter):hover {
+  cursor: pointer;
+  fill: var(--Red);
+}
+
+.socials {
+  padding: 0.8em 0;
+}
+
+.social-links {
+  color: inherit;
+}
+
 @media screen and (min-width: 768px) {
   main {
     width: 100%;
@@ -557,6 +587,6 @@ footer > div:nth-child(1) {
 
 @media screen and (min-width: 120em) {
   body {
-    font-size: 1.2em;
+    font-size: 1.15em;
   }
 }
