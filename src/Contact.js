@@ -1,4 +1,5 @@
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import Map from "./Map";
 
 const Contact = () => {
   return (
@@ -19,6 +20,8 @@ const Contact = () => {
           </a>
         </span>
       </p>
+      <br />
+      <Map />
     </section>
   );
 };
